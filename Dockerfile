@@ -6,7 +6,7 @@ LABEL maintainer="Zeeshan Haider"
 WORKDIR /home/
 
 ## install necessary packages
-#RUN apt-get update && apt-get install -y curl vim wget software-properties-common ssh net-tools wamerican wamerican-insane wbrazilian wdutch wbritish-large
+RUN apt-get update && apt-get install -y curl vim wget software-properties-common ssh net-tools wamerican wamerican-insane wbrazilian wdutch wbritish-large
 RUN apt-get install -y python3 python3-pip python3-numpy python3-matplotlib python3-scipy python3-pandas python3-simpy
 
 ## set python3 as default (currently python 3.5)
