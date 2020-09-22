@@ -9,5 +9,5 @@ services:
   - docker
 
 script:
-  - docker build -t zeeshanhs/spark
+  - docker build -t zeeshanhs/spark .
 
