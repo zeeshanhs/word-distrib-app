@@ -6,7 +6,7 @@ LABEL maintainer="Zeeshan Haider"
 WORKDIR /home/
 
 ## install necessary packages
-RUN apt-get update && apt-get install -y curl vim wget software-properties-common ssh net-tools wamerican wamerican-insane wbrazilian wdutch wbritish-large
+#RUN apt-get update && apt-get install -y curl vim wget software-properties-common ssh net-tools wamerican wamerican-insane wbrazilian wdutch wbritish-large
 RUN apt-get install -y python3 python3-pip python3-numpy python3-matplotlib python3-scipy python3-pandas python3-simpy
 
 ## set python3 as default (currently python 3.5)
@@ -14,7 +14,7 @@ RUN update-alternatives --install "/usr/bin/python" "python" "$(which python3)" 
 
 ## move files from downloads folder at the host to /home in the container
 ## comment this line if you prefer to download during the build process
-COPY downloads/* /home/
+#COPY downloads/* /home/
 
 ## uncomment next two lines if you prefer to download during the build process
 RUN curl -L -b "oraclelicense=a" -O http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
