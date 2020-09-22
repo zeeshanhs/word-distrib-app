@@ -1,4 +1,4 @@
-language: generic
+language: bash
 
 sudo: required
 
@@ -9,5 +9,5 @@ services:
   - docker
 
 script:
-  ./build-images.sh
+  - docker build -t zeeshanhs/spark
 
